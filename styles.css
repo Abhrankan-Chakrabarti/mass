@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('background.webp');
-    background-size: cover;
+    background-size: cover; /* or initial, this will be overridden by JavaScript */
     color: white;
     text-align: center;
 }
