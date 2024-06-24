@@ -1,37 +1,36 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     background-image: url('background.webp');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
+    color: white;
+    text-align: center;
 }
 
 h1 {
-    margin-top: 20px;
-    color: white; /* Set the text color to white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #game {
-    background-color: #fff;
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    display: inline-block;
 }
 
 button {
     margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+button:hover {
+    background-color: #666;
+}
+
+#upgrades, #achievements {
+    margin-top: 20px;
 }
