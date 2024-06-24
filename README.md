@@ -1,6 +1,8 @@
 # Mass
 
-An incremental game where you build a solar system. The game is implemented using HTML, CSS, and JavaScript, and is hosted on GitHub Pages.
+An incremental game where you build a solar system by generating mass and buying planets. Implemented with HTML, CSS, and JavaScript.
+
+![Background Image](background.webp)
 
 ## Game Description
 
@@ -15,6 +17,10 @@ In this game, you generate mass to build planets and expand your solar system. T
 ## Live Demo
 
 You can play the game [here](https://abhrankan-chakrabarti.github.io/mass/).
+
+## AI-Generated WebP Image
+
+The background image for this website was created using AI and is in WebP format. The image features a colorful and detailed depiction of a solar system, with planets of various sizes orbiting a central star.
 
 ## Files
 
