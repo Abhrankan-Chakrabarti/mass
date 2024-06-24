@@ -11,6 +11,8 @@ body {
 
 h1 {
     margin-top: 20px;
+    color: white; /* Set the text color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
 }
 
 #game {
