@@ -6,11 +6,11 @@ let achievements = [];
 let planets = [];
 
 const planetImages = [
-    { type: 'Earth-like Planet', filename: 'earth_like.webp' },
-    { type: 'Gas Giant', filename: 'gas_giant.webp' },
-    { type: 'Desert Planet', filename: 'desert_planet.webp' },
-    { type: 'Ice Planet', filename: 'ice_planet.webp' },
-    { type: 'Volcanic Planet', filename: 'volcanic_planet.webp' }
+    { type: 'Earth-like Planet', filename: 'earth_like.webp', description: 'A vibrant, blue-green planet with visible oceans and continents.' },
+    { type: 'Gas Giant', filename: 'gas_giant.webp', description: 'A large planet with a thick atmosphere, primarily composed of gases.' },
+    { type: 'Desert Planet', filename: 'desert_planet.webp', description: 'A rocky, arid planet with a reddish or yellowish surface.' },
+    { type: 'Ice Planet', filename: 'ice_planet.webp', description: 'A cold, icy world with a white or pale blue surface, covered in ice and snow.' },
+    { type: 'Volcanic Planet', filename: 'volcanic_planet.webp', description: 'A fiery planet with active volcanoes, lava flows, and a glowing, molten surface.' }
 ];
 
 function generateMass() {
@@ -29,7 +29,8 @@ function buyPlanet() {
         let newPlanet = {
             name: `${planet.type} ${planetCount}`,
             massPerSecond: Math.floor(planetCost / 10),
-            image: planet.filename
+            image: planet.filename,
+            description: planet.description
         };
         planets.push(newPlanet);
         updateUI();
@@ -78,11 +79,10 @@ function updatePlanetList() {
     planetList.innerHTML = '';
     planets.forEach(planet => {
         const listItem = document.createElement('li');
-        listItem.textContent = `${planet.name} - Mass per second: ${planet.massPerSecond}`;
-        const img = document.createElement('img');
-        img.src = planet.image;
-        img.alt = planet.type;
-        listItem.appendChild(img);
+        listItem.innerHTML = `${planet.name} - Mass per second: ${planet.massPerSecond}
+            <br>
+            <img src="${planet.image}" alt="${planet.type}" title="${planet.description}" class="planet-img">
+            <p>${planet.description}</p>`;
         planetList.appendChild(listItem);
     });
 }
