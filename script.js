@@ -67,11 +67,19 @@ function addAchievement(name) {
     achievementList.appendChild(listItem);
 }
 
+function updateBackground() {
+    const baseSize = 100; // base size percentage
+    const maxSize = 150;  // maximum size percentage
+    const zoomFactor = Math.min(baseSize + planetCount, maxSize);
+    document.body.style.backgroundSize = `${zoomFactor}%`;
+}
+
 function updateUI() {
-    document.getElementById('mass').textContent = mass;
-    document.getElementById('planetCount').textContent = planetCount;
-    document.getElementById('planetCost').textContent = planetCost;
+    document.getElementById('mass').textContent = formatNumber(mass);
+    document.getElementById('planetCount').textContent = formatNumber(planetCount);
+    document.getElementById('planetCost').textContent = formatNumber(planetCost);
     updatePlanetList();
+    updateBackground(); // update background size
 }
 
 function updatePlanetList() {
@@ -79,12 +87,17 @@ function updatePlanetList() {
     planetList.innerHTML = '';
     planets.forEach(planet => {
         const listItem = document.createElement('li');
-        listItem.innerHTML = `${planet.name} - Mass per second: ${planet.massPerSecond}
+        listItem.innerHTML = `${planet.name} - Mass per second: ${formatNumber(planet.massPerSecond)}
             <br>
             <img src="${planet.image}" alt="${planet.type}" title="${planet.description}" class="planet-img">
             <p>${planet.description}</p>`;
         planetList.appendChild(listItem);
     });
+}
+
+// Utility function to format numbers with commas
+function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 // Initial UI update
