@@ -20,13 +20,13 @@ body {
 
 @media (max-width: 768px) {
     #musicControls {
-        top: 10px; /* Adjust for tablets */
+        top: 15px; /* Adjust for tablets */
     }
 }
 
 @media (max-width: 480px) {
     #musicControls {
-        top: 5px; /* Adjust for mobile phones */
+        top: 10px; /* Adjust for mobile phones */
     }
 }
 
@@ -42,13 +42,13 @@ body {
 
 @media (max-width: 768px) {
     #title {
-        margin-top: 60px; /* Adjust for tablets */
+        margin-top: 90px; /* Adjust for tablets */
     }
 }
 
 @media (max-width: 480px) {
     #title {
-        margin-top: 50px; /* Adjust for mobile phones */
+        margin-top: 100px; /* Adjust for mobile phones */
     }
 }
 
