@@ -6,8 +6,15 @@ body {
     text-align: center;
 }
 
-h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+/* Ensure the title has enough space */
+#title {
+    margin-top: 100px; /* Adjust this value as needed */
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add background for better visibility */
+    border-radius: 10px;
 }
 
 #game {
