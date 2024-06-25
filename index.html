@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="musicControls">
+        <audio id="backgroundMusic" src="background-music.mp3" autoplay loop></audio>
+        <button id="playButton">Play</button>
+        <button id="pauseButton">Pause</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" />
+    </div>
     <div id="title">Mass - Build a Solar System</div>
     <div id="game">
         <p>Mass: <span id="mass">0</span></p>
@@ -27,13 +33,7 @@
         <div class="progress-bar">
             <div class="progress-fill" id="progressFill"></div>
         </div>
-        <div id="musicControls">
-            <button id="playButton">Play</button>
-            <button id="pauseButton">Pause</button>
-            <input type="range" id="volumeControl" min="0" max="1" step="0.1" />
-        </div>
     </div>
-    <audio id="backgroundMusic" src="background-music.mp3" autoplay loop></audio>
     <script src="script.js"></script>
 </body>
 </html>
