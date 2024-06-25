@@ -19,7 +19,7 @@ h1 {
 
 #musicControls {
     position: fixed;
-    top: 10px; /* Adjust the top value as needed */
+    top: 60px; /* Adjust the top value to leave enough space for the title */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Offset by 50% of its own width */
     z-index: 9999; /* Ensure the controls are above other content */
