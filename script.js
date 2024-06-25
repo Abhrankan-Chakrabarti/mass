@@ -80,12 +80,18 @@ function updateBackground() {
     document.body.style.backgroundSize = `${zoomFactor}%`;
 }
 
+function updateProgressBar() {
+    const progress = Math.min((mass / planetCost) * 100, 100);
+    document.getElementById('progressFill').style.width = `${progress}%`;
+}
+
 function updateUI() {
     document.getElementById('mass').textContent = formatNumber(mass);
     document.getElementById('planetCount').textContent = formatNumber(planetCount);
     document.getElementById('planetCost').textContent = formatNumber(planetCost);
     updatePlanetList();
-    updateBackground(); // update background size
+    updateBackground();
+    updateProgressBar(); // Update progress bar
 }
 
 function updatePlanetList() {
