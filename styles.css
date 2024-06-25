@@ -19,8 +19,8 @@ h1 {
 
 #musicControls {
     position: fixed;
-    top: 10px; /* Adjust the top value to position the controls */
-    left: 10px; /* Adjust the left value to position the controls */
+    top: 50px; /* Adjust the top value to leave space for the title */
+    left: 10px; /* Adjust the left value as needed */
     z-index: 9999; /* Ensure the controls are above other content */
 }
 
