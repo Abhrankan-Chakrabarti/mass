@@ -6,15 +6,50 @@ body {
     text-align: center;
 }
 
-/* Ensure the title has enough space */
+#musicControls {
+    position: fixed;
+    top: 20px; /* Default for larger screens */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    #musicControls {
+        top: 10px; /* Adjust for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #musicControls {
+        top: 5px; /* Adjust for mobile phones */
+    }
+}
+
 #title {
-    margin-top: 100px; /* Adjust this value as needed */
+    margin-top: 80px; /* Increased default margin for larger screens */
     text-align: center;
     color: white;
     font-size: 2em;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Add background for better visibility */
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #title {
+        margin-top: 60px; /* Adjust for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #title {
+        margin-top: 50px; /* Adjust for mobile phones */
+    }
 }
 
 #game {
@@ -22,18 +57,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-}
-
-#musicControls {
-    position: fixed;
-    top: 20px; /* Decreased the top value */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Offset by 50% of its own width */
-    z-index: 9999; /* Ensure the controls are above other content */
-    background-color: #ddd; /* Add background color for better visibility */
-    padding: 10px; /* Add padding for better spacing */
-    border-radius: 5px; /* Add border radius for better styling */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Add shadow for better visual separation */
+    margin-top: 20px;
 }
 
 button {
