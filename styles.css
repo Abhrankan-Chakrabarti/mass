@@ -11,7 +11,7 @@ body {
     top: 20px; /* Default for larger screens */
     left: 50%;
     transform: translateX(-50%);
-    z-index: 9999;
+    z-index: 9999; /* Ensure it stays on top */
     background-color: #ddd;
     padding: 10px;
     border-radius: 5px;
@@ -60,6 +60,24 @@ body {
     margin-top: 20px;
 }
 
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative; /* Ensure it positions correctly */
+    z-index: 10; /* Adjust to be above other elements if necessary */
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+    transition: width 0.5s;
+    z-index: 10; /* Ensure it stays above other elements */
+}
+
 button {
     margin: 10px;
     padding: 10px;
@@ -89,23 +107,4 @@ button:hover {
     margin: 5px 0;
     font-size: 0.9em;
     color: #ddd;
-}
-
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px; /* Adjust the height as needed */
-    background-color: #ddd;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-
-.progress-fill {
-    width: 0;
-    height: 100%;
-    background-color: #4caf50;
-    border-radius: 10px;
-    transition: width 0.5s;
 }
