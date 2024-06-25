@@ -27,6 +27,7 @@ function generateMass() {
 function buyPlanet() {
     if (mass >= planetCost) {
         mass -= planetCost;
+        playSound('clickSound');
         planetCount++;
         planetCost = Math.floor(planetCost * 1.5);
 
