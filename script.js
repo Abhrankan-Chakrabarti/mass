@@ -13,8 +13,13 @@ const planetImages = [
     { type: 'Volcanic Planet', filename: 'volcanic_planet.webp', description: 'A fiery planet with active volcanoes, lava flows, and a glowing, molten surface.' }
 ];
 
+function playSound(soundId) {
+    document.getElementById(soundId).play();
+}
+
 function generateMass() {
     mass += massPerClick;
+    playSound('clickSound');
     updateUI();
     checkAchievements();
 }
@@ -65,6 +70,7 @@ function addAchievement(name) {
     const listItem = document.createElement('li');
     listItem.textContent = name;
     achievementList.appendChild(listItem);
+    playSound('achievementSound');
 }
 
 function updateBackground() {
