@@ -17,6 +17,13 @@ h1 {
     display: inline-block;
 }
 
+#musicControls {
+    position: fixed;
+    top: 10px; /* Adjust the top value to position the controls */
+    left: 10px; /* Adjust the left value to position the controls */
+    z-index: 9999; /* Ensure the controls are above other content */
+}
+
 button {
     margin: 10px;
     padding: 10px;
