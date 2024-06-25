@@ -48,6 +48,7 @@ function buyUpgrade() {
     const upgradeCost = 50;
     if (mass >= upgradeCost) {
         mass -= upgradeCost;
+        playSound('clickSound');
         massPerClick *= 2;
         document.getElementById('upgradeBtn').style.display = 'none';
         updateUI();
