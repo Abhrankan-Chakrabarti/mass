@@ -31,7 +31,7 @@ body {
 }
 
 #title {
-    margin-top: 80px; /* Increased default margin for larger screens */
+    margin-top: 100px; /* Increased default margin for larger screens */
     text-align: center;
     color: white;
     font-size: 2em;
@@ -42,13 +42,13 @@ body {
 
 @media (max-width: 768px) {
     #title {
-        margin-top: 90px; /* Adjust for tablets */
+        margin-top: 110px; /* Adjust for tablets */
     }
 }
 
 @media (max-width: 480px) {
     #title {
-        margin-top: 100px; /* Adjust for mobile phones */
+        margin-top: 120px; /* Adjust for mobile phones */
     }
 }
 
