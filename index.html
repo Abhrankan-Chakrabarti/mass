@@ -27,8 +27,13 @@
         <div class="progress-bar">
             <div class="progress-fill" id="progressFill"></div>
         </div>
-        <audio id="backgroundMusic" src="background-music.mp3" autoplay loop></audio>
+        <div id="musicControls">
+            <button id="playButton">Play</button>
+            <button id="pauseButton">Pause</button>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" />
+        </div>
     </div>
+    <audio id="backgroundMusic" src="background-music.mp3" autoplay loop></audio>
     <script src="script.js"></script>
 </body>
 </html>
