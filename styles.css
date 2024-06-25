@@ -19,9 +19,13 @@ h1 {
 
 #musicControls {
     position: fixed;
-    top: 50px; /* Adjust the top value to leave space for the title */
-    left: 10px; /* Adjust the left value as needed */
+    top: 10px; /* Adjust the top value as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset by 50% of its own width */
     z-index: 9999; /* Ensure the controls are above other content */
+    background-color: #ddd; /* Optional: Add background color for better visibility */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    border-radius: 5px; /* Optional: Add border radius for better styling */
 }
 
 button {
