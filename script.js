@@ -14,18 +14,21 @@ const planetImages = [
 ];
 
 const backgroundMusic = document.getElementById('backgroundMusic');
+const playButton = document.getElementById('playButton');
+const pauseButton = document.getElementById('pauseButton');
+const volumeControl = document.getElementById('volumeControl');
 
-function playMusic() {
+playButton.addEventListener('click', function() {
     backgroundMusic.play();
-}
+});
 
-function pauseMusic() {
+pauseButton.addEventListener('click', function() {
     backgroundMusic.pause();
-}
+});
 
-function setVolume(volume) {
-    backgroundMusic.volume = volume;
-}
+volumeControl.addEventListener('input', function() {
+    backgroundMusic.volume = volumeControl.value;
+});
 
 function playSound(soundId) {
     document.getElementById(soundId).play();
