@@ -13,6 +13,20 @@ const planetImages = [
     { type: 'Volcanic Planet', filename: 'volcanic_planet.webp', description: 'A fiery planet with active volcanoes, lava flows, and a glowing, molten surface.' }
 ];
 
+const backgroundMusic = document.getElementById('backgroundMusic');
+
+function playMusic() {
+    backgroundMusic.play();
+}
+
+function pauseMusic() {
+    backgroundMusic.pause();
+}
+
+function setVolume(volume) {
+    backgroundMusic.volume = volume;
+}
+
 function playSound(soundId) {
     document.getElementById(soundId).play();
 }
