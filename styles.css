@@ -8,10 +8,10 @@ body {
 
 #musicControls {
     position: fixed;
-    top: 20px; /* Default for larger screens */
+    top: 20px; /* Adjust for default view */
     left: 50%;
     transform: translateX(-50%);
-    z-index: 9999; /* Ensure it stays on top */
+    z-index: 9999;
     background-color: #ddd;
     padding: 10px;
     border-radius: 5px;
@@ -31,7 +31,7 @@ body {
 }
 
 #title {
-    margin-top: 100px; /* Default margin for larger screens */
+    margin-top: 60px; /* Default margin for larger screens */
     text-align: center;
     color: white;
     font-size: 2em;
@@ -42,13 +42,13 @@ body {
 
 @media (max-width: 768px) {
     #title {
-        margin-top: 140px; /* Increase margin for tablets */
+        margin-top: 80px; /* Increase margin for tablets */
     }
 }
 
 @media (max-width: 480px) {
     #title {
-        margin-top: 180px; /* Further increase margin for mobile phones */
+        margin-top: 100px; /* Further increase margin for mobile phones */
     }
 }
 
@@ -65,8 +65,8 @@ body {
     background-color: #ddd;
     border-radius: 10px;
     margin: 10px 0;
-    position: relative; /* Ensure it positions correctly */
-    z-index: 10; /* Adjust to be above other elements if necessary */
+    position: relative;
+    z-index: 10;
 }
 
 .progress-fill {
@@ -75,7 +75,7 @@ body {
     background-color: #4caf50;
     border-radius: 10px;
     transition: width 0.5s;
-    z-index: 10; /* Ensure it stays above other elements */
+    z-index: 10;
 }
 
 button {
