@@ -47,3 +47,18 @@ button:hover {
     font-size: 0.9em;
     color: #ddd;
 }
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    width: 0;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 10px;
+    transition: width 0.5s;
+}
