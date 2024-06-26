@@ -40,7 +40,7 @@ function buyPlanet() {
             description: planet.description
         };
         let newPlanetName = true;
-        for (var i = 0; i < planetCount - 1; i++) {
+        for (var i = 0; i < planets.length; i++) {
             if (planets[i].name === newPlanet.name) {
                 newPlanetName = false;
                 planets[i].count += newPlanet.count;
