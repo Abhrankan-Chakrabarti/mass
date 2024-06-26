@@ -40,13 +40,13 @@ function buyPlanet() {
             description: planet.description
         };
         let newPlanetName = true;
-        for (var i = 0; i < planets.length; i++) {
-            if (planets[i].name === newPlanet.name) {
+        planets.forEach(planet => {
+            if (planet.name === newPlanet.name) {
                 newPlanetName = false;
-                planets[i].count += newPlanet.count;
-                planets[i].massPerSecond += newPlanet.massPerSecond;
+                planet.count += 1;
+                planet.massPerSecond += newPlanet.massPerSecond;
             }
-        }
+        });
         if (newPlanetName) {
             planets.push(newPlanet);
         }
