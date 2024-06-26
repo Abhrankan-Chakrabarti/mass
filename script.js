@@ -121,7 +121,7 @@ function updatePlanetList() {
     planetList.innerHTML = '';
     planets.forEach(planet => {
         const listItem = document.createElement('li');
-        listItem.innerHTML = `${planet.name} - Mass per second: ${formatNumber(planet.massPerSecond)}
+        listItem.innerHTML = `${planet.name}s: ${formatNumber(planet.count)} - Mass per second: ${formatNumber(planet.massPerSecond)}
             <br>
             <img src="${planet.image}" alt="${planet.type}" title="${planet.description}" class="planet-img">
             <p>${planet.description}</p>`;
