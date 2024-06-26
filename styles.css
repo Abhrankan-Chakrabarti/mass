@@ -16,10 +16,25 @@ body {
 }
 
 #musicControls {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
+    position: fixed; /* Fixed position to avoid overlapping with other elements */
+    top: 10px; /* Adjust to prevent hiding the title */
+    right: 10px; /* Keep it on the right side */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Media query to adjust position for smaller screens */
+@media (max-width: 600px) {
+    #musicControls {
+        top: 50px; /* Increase top margin to avoid overlapping with the title */
+    }
+}
+
+/* Other existing styles */
+#game {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
 }
 
 .progress-bar {
@@ -37,15 +52,6 @@ body {
     background-color: #4caf50;
     border-radius: 10px;
     transition: width 0.5s;
-}
-
-#game {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-top: 20px;
-    width: 90%;
 }
 
 @media (max-width: 768px) {
