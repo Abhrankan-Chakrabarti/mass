@@ -8,11 +8,17 @@
 </head>
 <body>
     <div id="title">Mass - Build a Solar System</div>
+    <!-- Music Controls -->
     <div id="musicControls">
-        <audio id="backgroundMusic" src="background-music.mp3" loop></audio>
-        <button id="playButton">Play</button>
-        <button id="pauseButton">Pause</button>
-        <input type="range" id="volumeControl" min="0" max="1" step="0.1" />
+        <audio id="backgroundMusic" loop>
+            <source src="background.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
     </div>
     <div id="game">
         <p>Mass: <span id="mass">0</span></p>
@@ -30,9 +36,6 @@
         </div>
         <audio id="clickSound" src="click.mp3"></audio>
         <audio id="achievementSound" src="achievement.mp3"></audio>
-    </div>
-    <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
     </div>
     <script src="script.js"></script>
 </body>

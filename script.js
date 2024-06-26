@@ -13,23 +13,6 @@ const planetImages = [
     { type: 'Volcanic Planet', filename: 'volcanic_planet.webp', description: 'A fiery planet with active volcanoes, lava flows, and a glowing, molten surface.' }
 ];
 
-const backgroundMusic = document.getElementById('backgroundMusic');
-const playButton = document.getElementById('playButton');
-const pauseButton = document.getElementById('pauseButton');
-const volumeControl = document.getElementById('volumeControl');
-
-playButton.addEventListener('click', function() {
-    backgroundMusic.play();
-});
-
-pauseButton.addEventListener('click', function() {
-    backgroundMusic.pause();
-});
-
-volumeControl.addEventListener('input', function() {
-    backgroundMusic.volume = volumeControl.value;
-});
-
 function playSound(soundId) {
     document.getElementById(soundId).play();
 }
@@ -99,6 +82,15 @@ function updateBackground() {
     document.body.style.backgroundSize = `${zoomFactor}%`;
 }
 
+function toggleMusic() {
+    const music = document.getElementById('backgroundMusic');
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+
 function updateProgressBar() {
     const progress = Math.min((mass / planetCost) * 100, 100);
     document.getElementById('progressFill').style.width = `${progress}%`;
@@ -110,7 +102,7 @@ function updateUI() {
     document.getElementById('planetCost').textContent = formatNumber(planetCost);
     updatePlanetList();
     updateBackground();
-    updateProgressBar(); // Update progress bar
+    updateProgressBar();
 }
 
 function updatePlanetList() {
