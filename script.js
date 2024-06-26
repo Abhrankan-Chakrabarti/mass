@@ -5,7 +5,7 @@ let massPerClick = 1;
 let achievements = [];
 let planets = [];
 
-const planetImages = [
+const planetTypes = [
     { type: 'Earth-like Planet', filename: 'earth_like.webp', description: 'A vibrant, blue-green planet with visible oceans and continents.' },
     { type: 'Gas Giant', filename: 'gas_giant.webp', description: 'A large planet with a thick atmosphere, primarily composed of gases.' },
     { type: 'Desert Planet', filename: 'desert_planet.webp', description: 'A rocky, arid planet with a reddish or yellowish surface.' },
@@ -31,14 +31,25 @@ function buyPlanet() {
         planetCount++;
         planetCost = Math.floor(planetCost * 1.5);
 
-        const planet = planetImages[planetCount % planetImages.length];
+        const planet = planetTypes[Math.floor(Math.random() * planetTypes.length)];
         let newPlanet = {
-            name: `${planet.type} ${planetCount}`,
+            name: planet.type,
+            count: 1,
             massPerSecond: Math.floor(planetCost / 10),
             image: planet.filename,
             description: planet.description
         };
-        planets.push(newPlanet);
+        let newPlanetName = true;
+        for (var i = 0; i < planetCount; i++) {
+            if (planets[i].name === newPlanet.name) {
+                newPlanetName = false;
+                planets[i].count += newPlanet.count;
+                planets[i].massPerSecond += newPlanet.massPerSecond;
+            }
+        }
+        if (newPlanetName) {
+            planets.push(newPlanet);
+        }
         updateUI();
         checkAchievements();
     }
