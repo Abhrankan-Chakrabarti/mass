@@ -1,13 +1,9 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
+    background-image: url('background.webp');
+    background-size: cover;
+    color: white;
+    text-align: center;
 }
 
 #title {
@@ -40,10 +36,13 @@ body {
 }
 
 .progress-bar {
-    width: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #ddd;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .progress-fill {
